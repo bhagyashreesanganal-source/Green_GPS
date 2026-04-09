@@ -1,0 +1,31 @@
+{
+  "nodes": [
+    "Mumbai",
+    "Singapore",
+    "Dubai",
+    "Frankfurt",
+    "London",
+    "New York",
+    "Tokyo",
+    "Sydney"
+  ],
+  "edges": [
+    { "from": "Mumbai", "to": "Singapore", "latency": 55, "carbon": 8 },
+    { "from": "Mumbai", "to": "Dubai", "latency": 42, "carbon": 14 },
+    { "from": "Dubai", "to": "Frankfurt", "latency": 68, "carbon": 22 },
+    { "from": "Singapore", "to": "Tokyo", "latency": 62, "carbon": 18 },
+    { "from": "Tokyo", "to": "New York", "latency": 120, "carbon": 40 },
+    { "from": "Frankfurt", "to": "London", "latency": 18, "carbon": 12 },
+    { "from": "Singapore", "to": "London", "latency": 95, "carbon": 27 },
+    { "from": "Mumbai", "to": "Frankfurt", "latency": 110, "carbon": 19 },
+    { "from": "London", "to": "New York", "latency": 75, "carbon": 33 },
+    { "from": "Tokyo", "to": "Sydney", "latency": 95, "carbon": 21 },
+    { "from": "Singapore", "to": "Sydney", "latency": 85, "carbon": 26 },
+    { "from": "Dubai", "to": "London", "latency": 82, "carbon": 35 }
+  ],
+  "metadata": {
+    "units": { "latency": "ms", "carbon": "gCO2" },
+    "notes": "Undirected edges are implied by backend/engine expanding edges both ways."
+  }
+}
+

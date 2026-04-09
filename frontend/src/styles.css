@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  background:
+    radial-gradient(1200px circle at 12% 8%, rgba(49, 180, 255, 0.14), transparent 35%),
+    radial-gradient(1000px circle at 86% 92%, rgba(21, 170, 124, 0.13), transparent 35%),
+    linear-gradient(125deg, #02030a 0%, #030915 45%, #01040d 100%);
+  color: #e8eefc;
+}
+
+.bg-night {
+  background:
+    radial-gradient(circle at 20% 15%, rgba(26, 71, 133, 0.35), transparent 40%),
+    radial-gradient(circle at 75% 80%, rgba(0, 101, 95, 0.18), transparent 35%),
+    linear-gradient(125deg, #02030a, #040c1e 45%, #01040f);
+}
+
+.glass-panel {
+  border: 1px solid rgba(159, 182, 221, 0.22);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(4, 12, 30, 0.78), rgba(3, 7, 22, 0.6));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4), inset 0 0 0 1px rgba(255, 255, 255, 0.03);
+}
+
+.control-select {
+  width: 100%;
+  border-radius: 11px;
+  border: 1px solid rgba(155, 180, 225, 0.3);
+  background: rgba(5, 10, 25, 0.8);
+  color: #dfebff;
+  padding: 8px 10px;
+  font-size: 13px;
+  outline: none;
+}
+
+.control-select:focus {
+  border-color: rgba(76, 221, 255, 0.7);
+  box-shadow: 0 0 0 1px rgba(76, 221, 255, 0.35);
+}
+
+.route-flow {
+  animation-name: route-flow;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.map-stars {
+  background-image:
+    radial-gradient(circle at 15% 25%, rgba(255, 255, 255, 0.45) 0.6px, transparent 1px),
+    radial-gradient(circle at 75% 18%, rgba(187, 235, 255, 0.4) 0.7px, transparent 1px),
+    radial-gradient(circle at 40% 70%, rgba(129, 218, 255, 0.35) 0.8px, transparent 1px),
+    radial-gradient(circle at 60% 45%, rgba(255, 255, 255, 0.24) 0.55px, transparent 1px);
+  background-size: 220px 220px, 260px 260px, 300px 300px, 180px 180px;
+}
+
+.landing-ambient {
+  background:
+    radial-gradient(circle at 20% 25%, rgba(34, 211, 153, 0.14), transparent 36%),
+    radial-gradient(circle at 78% 15%, rgba(56, 189, 248, 0.16), transparent 34%),
+    radial-gradient(circle at 55% 85%, rgba(99, 102, 241, 0.14), transparent 34%);
+}
+
+.network-overlay {
+  background-image:
+    radial-gradient(circle at 18% 30%, rgba(255, 255, 255, 0.25) 0.7px, transparent 1px),
+    radial-gradient(circle at 76% 20%, rgba(255, 255, 255, 0.22) 0.7px, transparent 1px),
+    radial-gradient(circle at 50% 70%, rgba(52, 211, 153, 0.26) 0.9px, transparent 1px),
+    linear-gradient(rgba(82, 132, 194, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(82, 132, 194, 0.06) 1px, transparent 1px);
+  background-size: 220px 220px, 260px 260px, 300px 300px, 44px 44px, 44px 44px;
+  animation: network-drift 22s linear infinite;
+}
+
+.pulse-dot {
+  animation: pulse-dot 2.2s ease-in-out infinite;
+  filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.9));
+}
+
+@keyframes route-flow {
+  from {
+    stroke-dashoffset: 80;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes network-drift {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
