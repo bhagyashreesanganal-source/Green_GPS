@@ -1,6 +1,7 @@
 ## 🌿 Green GPS
 
-Green GPS is an intelligent eco-friendly internet routing simulator. It computes optimal paths between data centers using a modified Dijkstra algorithm with:
+Green GPS is a carbon-aware network routing simulator designed to minimize the environmental impact of global data transmission. While traditional internet routing (like BGP or standard OSPF) focuses purely on the shortest path or lowest latency, Green GPS introduces Sustainability as a primary routing metric.
+By using a Weighted Dijkstra Algorithm, the engine evaluates the "cost" of a path not just in milliseconds, but in grams of carbon emitted per gigabyte of data transferred.
 
 This repo is split into:
 
